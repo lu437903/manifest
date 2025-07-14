@@ -1,10 +1,10 @@
 workflows:
   nodejs_tests:
     name: Run Node.js tests
+    instance_type: linux_x2
     environment:
       node: latest
-      python3: latest
-      instance_type: linux_x2 # Chạy trên máy Linux mạnh hơn
+      python: latest
       vars:
         NODEJS_PROJECT_DIR: "."
     scripts:
