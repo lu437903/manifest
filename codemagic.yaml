@@ -4,10 +4,11 @@ workflows:
     instance_type: linux_x2
     environment:
       node: latest
-      python: latest
       vars:
         NODEJS_PROJECT_DIR: "."
     scripts:
+      - name: Check OS
+        script: uname -a
       - name: Install dependencies
         script: |
           cd $NODEJS_PROJECT_DIR
